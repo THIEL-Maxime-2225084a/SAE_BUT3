@@ -1,0 +1,41 @@
+controllers:
+    resource:
+        path: ../src/Controller/
+        namespace: App\Controller
+    type: attribute
+
+home:
+    path: /
+    controller: App\Controller\MainController::index
+
+camping_details:
+    path: /camping_details
+    controller: App\Controller\CampingDetailsController::camping_details
+
+campings_management:
+    path: /campings_management
+    controller: App\Controller\CampingsManagementController::campings_management
+
+login_pro:
+    path: /login_pro
+    controller: App\Controller\LoginProController::login_pro
+
+my_camping_data:
+    path: /my_camping_data
+    controller: App\Controller\MyCampingDataController::my_camping_data
+
+profiles_management:
+    path: /profiles_management
+    controller: App\Controller\ProfilesManagementController::profiles_management
+
+search_result:
+    path: /search_result
+    controller: App\Controller\SearchResultController::search_result
+
+sign_up_pro:
+    path: /sign_up_pro
+    controller: App\Controller\SignUpProController::sign_up_pro
+
+ticket_details:
+    path: /ticket_details
+    controller: App\Controller\TicketDetailsController::ticket_details

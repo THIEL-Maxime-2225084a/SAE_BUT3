@@ -1,0 +1,51 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<div class="searchBar">
+    <form action={{ path('search_result') }}>
+        <table>
+            <thead>
+                <tr>
+                    <th scope="col">Lieu</th>
+                    <th scope="col">Date d'arrivée</th>
+                    <th scope="col">Date de départ</th>
+                    <th scope="col">Type de location</th>
+                    <th scope="col">Nombre de personnes à loger</th>
+                    <th scope="col">Catégorie de camping</th>
+                    <th scope="col">Critères supplémentaires</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <select>
+                            <option>Mer</option>
+                            <option>Montagne</option>
+                            <option>Campagne</option>
+                            <option>Régions</option>
+                            <option>Ville</option>
+                        </select>
+                    </td>
+                    <td><input type="date"></td>
+                    <td><input type="date"></td>
+                    <td>
+                        <select>
+                            <option>Mobil-home</option>
+                            <option>Emplacement</option>
+                        </select>
+                    </td>
+                    <td><input type="range"></td>
+                    <td>
+                        <select>
+                            <option>Catégorie 1</option>
+                            <option>Catégorie 2</option>
+                        </select>
+                    </td>
+                    <td><button>Ajouter des critères</button></td>
+                </tr>
+            </tbody>
+        </table>
+        <button type="submit" class="browse">Lancer une recherche</button>
+    </form>
+</div>
+{% endblock %}

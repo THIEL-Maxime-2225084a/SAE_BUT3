@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{% block title %}Je campe en voiture électrique{% endblock %}</title>
+        <link rel="stylesheet" href="{{ asset('css/base.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/camping_details.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/camping_management.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/login_pro.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/main.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/my_camping_data.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/profiles_management.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/search_result.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/sign_up_pro.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/ticket_details.css') }}">
+    </head>
+    <body>
+        <header>
+            <h1 class="title">Je campe en voiture électrique</h1>
+            <p>Campings disposant de bornes électriques</p>
+            <br>
+            <div class="navbar">
+                <div class="dropdown">
+                    <div class="dropdown-content">
+                        <a href="{{ path('home') }}">Accueil</a>
+                        <a href="{{ path('login_pro') }}">Se connecter</a>
+                        <a href="{{ path('sign_up_pro') }}">S'inscrire</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="content">
+            {% block body %}
+                <!-- Contenu spécifique de chaque page -->
+            {% endblock %}
+        </div>
+
+        <footer>
+            <p>Copyright © 2024 - Mon site web</p>
+        </footer>
+    </body>
+</html>
